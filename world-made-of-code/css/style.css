@@ -1,0 +1,27 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+#world {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background: #000;
+}
+
+body.hide-cursor,
+body.hide-cursor * {
+  cursor: none !important;
+}
+
+/* Shown only if WebGL is missing: a quiet dark gradient instead of a blank page. */
+body.no-webgl #world {
+  background: radial-gradient(ellipse at 70% 30%, #2a2350 0%, #0b0d24 55%, #04050f 100%);
+}
